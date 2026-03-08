@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Units</title>
+    <style>
+
+
+
+    .container{
+        background-color: rgb(72, 170, 195);
+        height: 4;
+        display: grid;
+        padding: 5vw;
+        grid-template-columns: 22vw 22vw 22vw 22vw;
+        gap: 20px;
+    }
+    .box{
+        font-size: 2vw; /*view of with */
+        font-size: 2vh; /*view of height*/
+        /* font-size: 2em; */
+        font-size: 2rem;
+        font-size: x-large;
+        font-size: 1mm;
+        font-size: 20pt;
+        font-size: 20px;
+        background-color: blueviolet;
+        text-align: center;
+
+    }
+    @media screen and (max-width: 600px) {
+        .container{
+            /* background-color: red; */
+            grid-template-columns: 48% 48%;
+        }
+        @media screen and (max-width: 500px) {
+        .container{
+            grid-template-columns: 80%; /* fdlkjfdkl adj */ 
+
+        }
+        
+    }
+
+    .container2{
+        margin-top: 20px;
+        display: block;
+
+
+    }
+    .container2 .box{
+        width: clamp(400px, 90vw, 1200px);
+    }
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h1>This is a heading</h1>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo distinctio eum pariatur accusantium porro ea blanditiis fugit minus sequi tenetur.</div>
+        <div class="box">
+            <h1>This is a heading</h1>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur commodi officia at unde tempore quia? Itaque nulla sit maxime dolorem?</div>
+        <div class="box">
+            <h1>This is a heading</h1>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque praesentium fugiat sint voluptatum dolore reiciendis suscipit ab obcaecati repellendus culpa.</div>
+        <div class="box">
+            <h1>This is a heading</h1>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis at impedit dolor id nulla fugit blanditiis incidunt dolore iure optio.</div>
+    </div>
+    <div class="container container2">
+       <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque architecto voluptatum voluptate dolorum distinctio assumenda neque atque, facilis praesentium sunt ratione, similique cum fugit mollitia temporibus et non perferendis nam sed vel? Quam, eius doloribus unde ducimus veritatis minima doloremque nemo iste, consequuntur sunt totam esse at dolor facere nobis? Dicta odio tenetur, alias aperiam itaque facere deserunt aspernatur iste in, quaerat sapiente ea quam. Aspernatur consequuntur exercitationem deserunt incidunt tenetur pariatur, non ut ullam nobis quam doloremque, nemo soluta cumque est facere atque recusandae unde veritatis totam sunt fugiat! Maxime dolorem voluptatum modi rerum error quas dicta voluptates temporibus, pariatur hic consequatur beatae, aspernatur magnam facere inventore alias perferendis recusandae, repellat nobis nihil iusto tempora odit molestias magni. Quis ea minus consectetur vitae, quae quos? Fugiat soluta vero ab eos excepturi, explicabo sed iure commodi, corporis eum doloribus, amet quia. Blanditiis corporis quod a adipisci sequi reprehenderit repudiandae rerum corrupti obcaecati voluptas, aspernatur architecto soluta labore dolore voluptate. Consequuntur reiciendis beatae dicta voluptatem ut perspiciatis in cum consequatur, sapiente nihil expedita, necessitatibus rem, deleniti debitis minus eius vel aperiam. Reprehenderit dolore maxime ea adipisci ad aliquam tenetur, eum itaque nobis qui accusantium, mollitia minima, molestias recusandae sunt! Dolorem nihil suscipit saepe at iusto eveniet obcaecati ea officiis, itaque quidem minus maiores placeat, repellat nobis vitae sunt vel excepturi! Tenetur placeat eaque ratione, eius magnam aperiam ducimus quidem quas? Error quisquam vero provident consectetur tenetur nostrum doloremque! Aliquid iste sed fugit animi laudantium aperiam officiis esse ipsa voluptatem consequuntur inventore eveniet minus placeat ullam dolores repudiandae nisi dolore, quisquam delectus asperiores corporis. Atque numquam molestiae aut sit fugit, iure deserunt cupiditate aliquid sint dolore doloribus ex aliquam non illum nobis adipisci asperiores qui modi. Quibusdam porro explicabo hic facilis ducimus perferendis ex commodi dolorem tempore quam, qui, nulla possimus architecto? Hic, est praesentium. Rerum quia voluptatem laboriosam odio culpa quam autem quidem voluptates enim, incidunt, aperiam vero fugiat assumenda illum vel dignissimos cupiditate mollitia tempora at pariatur! Dolorum sequi reprehenderit nemo eos molestiae ipsa dolores quo provident beatae eum ipsam ducimus officia placeat, nobis laborum numquam fuga id dolorem ratione et laboriosam. Officiis vel officia eaque. Qui at officia modi minus placeat doloremque, maxime sunt labore ipsa numquam, omnis dolores odio harum voluptatibus eius et totam. Eveniet fugiat quam obcaecati at veniam temporibus ad facilis quidem nam expedita hic, aut, minus molestiae architecto corporis totam amet perspiciatis placeat fuga repellendus culpa soluta! Nemo eveniet at ad minima? Cum, necessitatibus nostrum adipisci accusamus dicta eveniet dignissimos accusantium quasi maxime mollitia. Saepe eos ratione illo repellat rem, quam labore! Porro esse saepe vitae cupiditate consectetur at sequi enim architecto nihil itaque, nemo quis! Deleniti rerum voluptatem ipsa eos obcaecati maxime saepe repellat quos libero recusandae natus, consectetur necessitatibus molestias ea ab cum corrupti tempore, facilis officia cupiditate iure maiores aperiam possimus vel. Culpa possimus veritatis sequi modi voluptatibus voluptatum facere doloremque nemo reprehenderit ut, illo ipsum molestias! Enim accusamus, itaque consectetur aliquam, beatae at rerum incidunt consequatur magnam velit neque in asperiores?</div>
+    </div>
+</body>
+</html>

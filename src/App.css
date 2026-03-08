@@ -1,0 +1,242 @@
+ *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        :root{
+            --color1:  rgb(79, 111, 119);
+            --color2: rgb(111, 159, 170);
+            --color3: rgb(137, 174, 211);
+            --color4: rgb(139, 209, 216);
+        }
+        body{
+            background-color: var(--color1);
+        }
+        
+        .app-container{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--color2);
+            width:600px;
+            margin: 30px;
+            border-radius: 10px;
+            padding: 30px 20px;
+        }
+        .SecoundRow{
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            justify-items: space-around;
+            justify-self: center;
+            padding:2px 10px;
+            transition: 1s ease-in;
+            background-color: var(--color3);
+
+        }
+        .question1{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        .bndKro1 label .question1 span{
+            padding: 10px;
+        }
+        .question1 span
+        .SecoundRow label{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            overflow: hidden;
+        }
+        .SecoundRow label .choose{
+            display: flex;
+            flex-direction: row;
+            width:140px;
+            justify-content: center;
+            align-items: center;
+        }
+        .details-for-shopkeeper2{
+            display: none;
+        }
+        .detail-for-shopkeeper1{
+            height: fit-content !important;
+            display: grid !important;
+            grid-template-columns: auto auto auto !important;
+        }
+        .expense-form{
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-around;
+            padding: 8px 0px;
+            background-color: var(--color4);
+            /* height: 0; */
+        }
+        input{
+            padding: 3px 3px;
+            border-radius: 5px;
+        }
+        .khata-form button{
+            padding: 2px 4px; 
+            border-radius: 5px;
+        }
+
+        .expense-item, .item-top{
+            display: grid;
+            grid-template-columns: 20% 20% 20% 20% ;
+            grid-template-rows: auto auto;
+            width: 100%;
+            justify-content: space-around;
+        }
+
+        .item-top{
+            background-color: var(--color4);
+        }
+        .total-price{
+          display: flex;
+          justify-content: space-around;
+        }
+        .total-price{
+            display: flex;
+            width: 100%;
+            justify-content: center !important;
+        }
+        .totalExpese{
+          margin: auto;
+        }
+        
+        button{
+            padding: 3px;
+        }
+        input{
+            padding-left: 20px;
+            width: 150px;       
+        }
+      
+        .Qimat h4{
+            text-align: center;
+            margin: 1px;
+            font-size: 12px;
+            padding: 1px 8px;
+            font-weight: 500;
+        }
+       table{
+        /* padding: 2px; */
+        width: 100%;
+        background-color: var(--color1);
+        background-color: rgba(133, 193, 253, 0.437);
+       }
+       tr{
+        background-color: rgba(195, 248, 231, 0.528);
+        margin: 5px;
+        box-shadow: 2px 3px 5px black;
+
+       }
+       td{
+        text-align: center !important;
+        margin: 2px 1px;
+        display: flex;
+        justify-content: center;
+        /* border-left: 1px solid black; */
+       }
+       .showKrn{
+        display: block;
+       }
+       .one{
+        border: 2px solid ;
+        display: none;
+        z-index: -3;
+
+       }
+        .two{
+        opacity: 1; 
+        display: flex; 
+        height: fit-content ;
+        justify-content: space-around;
+        transition: 2s ease;
+        justify-content: space-around;
+       }
+       h4{
+            text-align: center;
+            margin: 1px;
+            font-size: 12px;
+            padding: 1px 8px;
+            font-weight: 500;
+        }
+
+      
+       .lastCol1{
+        margin-left: 40px;
+        /* width: 300px; */
+       }
+       .lastCol1 h3{
+        display: inline-block;
+       }
+       .three{
+       }
+       .bndKro1{
+        height: 0 !important;
+        display: block;
+        /* margin: -1px; */
+        padding: 0;
+        overflow: hidden;
+       }
+       .bndKro1 span{
+        height: 0;
+        overflow: hidden;
+       }
+       .q1{
+        width: 230px;
+       }
+        .q2{
+        width: 30px;
+        padding: 2px;
+       }
+       
+       .bndKro1 span .control{
+        position: relative;
+        width: 25px;
+        border-radius: 15px;
+        text-align: center;
+        z-index: 2;
+        opacity: 1;
+        position: fixed;
+        z-index: 400;
+        top: 70px;
+        left: 450px;
+        padding: 2px 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+       }
+        
+       span{
+        /* padding: 2px 9px; */
+       }
+       .two:has(h4){
+       }
+      .details-for-shopkeeper2{
+            display: none;
+        }
+       .details-for-shopkeeper2 h4{
+        padding: 5px 32px;
+        border-top: 1px solid #000;
+       }
+    
+      
+    @media  screen and (max-width: 500px) {
+        .app-container{
+            width: 95% !important;
+            margin: auto;
+        }
+        input{
+            width: 100px !important;
+        }
+         .SecoundRow{
+            flex-direction: column;
+        }
+
+        
+    }
