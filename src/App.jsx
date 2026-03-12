@@ -139,7 +139,6 @@ function App() {
            کل منافع <br /> {parseFloat(munafa1.toFixed(4))}
         </h4>
       </div>
-      <BaliKhataList kiaApnaLakriHai={kiaApnaLakriHai} baliFoot={baliFoot} onDelete={deleteHandle} />
       <div className="total-price">
         <div className="totalExpese totalExpese1">
            <h3 onClick={controlstyle1} >
@@ -165,6 +164,8 @@ function App() {
             {/* </span> */}
         </div>
       </div>
+      <BaliKhataList kiaApnaLakriHai={kiaApnaLakriHai} baliFoot={baliFoot} onDelete={deleteHandle} />
+      
     </div>
   );
 }
