@@ -71,7 +71,7 @@ function App() {
   const munafa1 = bejnaQimatPost - QimatKhareed;
   return (
     <div className="app-container" >
-      <div className="CopanyName">خپلو آرا مشین & کارپینٹر شاپ ABC</div>
+      <div className="CopanyName">خپلو آرا مشین & کارپینٹر شاپ </div>
       <div className="topContainer">
         <div className="customerName">
         <input type="text" />
