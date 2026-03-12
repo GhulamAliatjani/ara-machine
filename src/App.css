@@ -387,7 +387,8 @@
        .total-price h3{
         /* background-color: red; */
         font-size: var(--fontnormal);
-        font-weight:400;
+        font-weight:200;
+        font-size: 15px;
        }
        .expense-form  {
         display: flex;
@@ -397,4 +398,5 @@
         gap: 3px
         /* background-color: #000 !important; */
        }
+
     }

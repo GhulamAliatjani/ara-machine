@@ -6,6 +6,7 @@ import BaliKhataList from "./BaliKhataList.jsx";
 function App() {
   const [kiaApnaLakriHai, setKiaApnaLakriHai] = useState(false);
   const [p2, setP2] = useState(200);
+  const itemDel = useRef()
   const setKatai = (e) => {
     e.preventDefault();
   };
@@ -62,6 +63,14 @@ function App() {
     (sum, item) => sum + item.totalPriceApnaLakri,
     0,
   );
+  
+  const deleteItem = (id) => {
+     itemDel.current = setTimeout(() => {
+      alert("Item deleted");
+      setbaliFoot((prev) => prev.filter((item) => item.id != id));
+
+    }, 3000)
+  };
   const [isopen, setIspen] = useState(false)
   const totalFood = baliFoot.reduce((sum, item) => sum + item.totalFt, 0);
   const QimatKhareed = totalFood * 1150;
@@ -164,7 +173,7 @@ function App() {
             {/* </span> */}
         </div>
       </div>
-      <BaliKhataList kiaApnaLakriHai={kiaApnaLakriHai} baliFoot={baliFoot} onDelete={deleteHandle} />
+      <BaliKhataList kiaApnaLakriHai={kiaApnaLakriHai} baliFoot={baliFoot} onDelete={deleteHandle} itemDel={itemDel} deleteItem={deleteItem} />
       
     </div>
   );

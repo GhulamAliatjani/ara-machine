@@ -1,7 +1,7 @@
 import React from 'react'
 import BaliKhtaItems from './BaliKhataIItems'
 
-function BaliKhataList({baliFoot, onDelete, kiaApnaLakriHai}) {
+function BaliKhataList({baliFoot, onDelete, kiaApnaLakriHai, itemDel, deleteItem}) {
   if(baliFoot.lengtd === 0){
     return <p className='no-expense'>No baliFoot yet</p>
   }
@@ -18,7 +18,7 @@ function BaliKhataList({baliFoot, onDelete, kiaApnaLakriHai}) {
     <tbody>
     {
       baliFoot.map(item => (
-        <BaliKhtaItems key={item.id} item={item} onDelete={onDelete} baliFoot={baliFoot} kiaApnaLakriHai={kiaApnaLakriHai} />
+        <BaliKhtaItems key={item.id} item={item} onDelete={onDelete} baliFoot={baliFoot} kiaApnaLakriHai={kiaApnaLakriHai} itemDel={itemDel} deleteItem={deleteItem} />
       ))
     }
     </tbody>
