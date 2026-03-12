@@ -69,7 +69,7 @@ function App() {
       alert("Item deleted");
       setbaliFoot((prev) => prev.filter((item) => item.id != id));
 
-    }, 3000)
+    }, 1000)
   };
   const [isopen, setIspen] = useState(false)
   const totalFood = baliFoot.reduce((sum, item) => sum + item.totalFt, 0);
