@@ -25,20 +25,31 @@ function App() {
   const totalBaliAdat = baliFoot.length;
   const [check, setCheck] = useState(true);
   const testRef = useRef();
+  const [isClass, setIsClass] = useState(true);
   const controlstyle1 = () => {
+    setCheck(check==true?false: true)
+    
     if (check == true) {
-      testRef.current.classList.toggle('detail-for-shopkeeper1')
-    } else {
-      testRef.current.style.height = "50px";
-      testRef.current.style.opacity = "1";
-      testRef.classList.toggle('detail-for-shopkeeper1')
+      testRef.current.classList.toggle('detail-for-shopkeeper2')
+      setIsClass(testRef.current.classList.contains('detail-for-shopkeeper2')? true: false)
+      // testRef.current.classList.remove('detail-for-shopkeeper0')
+    }
+    else {
+      // testRef.current.classList.toggle('detail-for-shopkeeper2')
+      // testRef.current.classList.remove('detail-for-shopkeeper0')
+
+      // testRef.current.style.height = "50px";
+      // testRef.current.style.opacity = "1";
+      // testRef.classList.toggle('detail-for-shopkeeper1')
 
     }
+    // const totl_foot = golai* golai*labai / 144 
   };
   const contorl1Ref = useRef()
   const controlStyle2 = ()=>{
     // console.clear()
     contorl1Ref.current.classList.toggle('bndKro1');
+    setIspen(!isopen);
 
   }
 
@@ -51,15 +62,22 @@ function App() {
     (sum, item) => sum + item.totalPriceApnaLakri,
     0,
   );
+  const [isopen, setIspen] = useState(false)
   const totalFood = baliFoot.reduce((sum, item) => sum + item.totalFt, 0);
   const QimatKhareed = totalFood * 1150;
   const bejnaQimatPre = totalFood * 1400;
   const bejnaQimatPost = totalFood * 1600;
-  const munafa = bejnaQimatPre - QimatKhareed;
+  // const munafa = bejnaQimatPre - QimatKhareed;
   const munafa1 = bejnaQimatPost - QimatKhareed;
   return (
     <div className="app-container" >
-      <h1 style={{ textAlign: "center" }}>چیڑائی تفصیلات </h1>
+      <div className="CopanyName">خپلو آرا مشین & کارپینٹر شاپ</div>
+      <div className="topContainer">
+        <div className="customerName">
+        <input type="text" />
+       <span> :بنام</span>
+        </div>
+      <h1 style={{ textAlign: "center" }}> <span className="firstBtn firstBtn1" onClick={controlstyle1} > {isClass? '🔶': '🔷'} </span>  <span> چیرائی کی تفصیلات </span>  <span className="firstBtn firstBtn2" onClick={controlStyle2}> {isopen== true? '🔶': '🔷'}</span> </h1></div>
       <div className="SecoundRow" ref={contorl1Ref}>
         <form action="" onSubmit={setKatai}>
           <input
@@ -71,7 +89,7 @@ function App() {
         <label htmlFor="">
           <span className="question1">
             <span>
-             کیا اپنا لکڑی ھے؟ </span><span className="control control1" onClick={controlStyle2} >O </span>
+             کیا اپنا لکڑی ھے؟ </span>
           </span>
           <div className="choose">
           <input
@@ -91,7 +109,6 @@ function App() {
               setKiaApnaLakriHai(false);
             }}
           />
-
           نھی
           </div>
         </label>
@@ -99,15 +116,10 @@ function App() {
       <BaliKhataForm
         onAddExpense={addExpense}
         prices={prices}
-        
         setPrices={setPrices}
         p={p2}
       />
-      <div className="two details-for-shopkeeper2 " ref={testRef}>
-        <h4>
-          {" "}
-          کل فٹ <br /> {parseFloat(totalFood.toFixed(1))}
-        </h4>
+      <div className="detail-for-shopkeeper1 " ref={testRef}>
         <h4>
           {" "}
           کل خریداری قیمت <br />
@@ -124,39 +136,33 @@ function App() {
         </h4>
         <h4>
           {" "}
-          کل منافع <br /> {parseFloat(munafa.toFixed(1))}
-        </h4>
-        <h4>
-          {" "}
-          چ کل منافع <br /> {parseFloat(munafa1.toFixed(4))}
+           کل منافع <br /> {parseFloat(munafa1.toFixed(4))}
         </h4>
       </div>
       <BaliKhataList kiaApnaLakriHai={kiaApnaLakriHai} baliFoot={baliFoot} onDelete={deleteHandle} />
       <div className="total-price">
-        <div className={kiaApnaLakriHai == true ? "two lastCol1" : "one lastcol1"}>
-          {" "}
-          <span>  کل قیمت Rs:<h3> {totalFullPrice.toFixed()} </h3></span>
-        </div>
-        <div className={kiaApnaLakriHai == true ? "one lastCol1" : "two lastCol1"}>
-          {" "}
-          <span onClick={() => setCheck(!check)}>
-            {" "}
-           کل قیمت Rs:  <h3> {totalbaliFoot.toFixed()} </h3>  {" "}
-          </span>
+        <div className="totalExpese totalExpese1">
+           <h3 onClick={controlstyle1} >
+            {totalBaliAdat.toFixed()} عداد
+          </h3>
         </div>
         <div className="totalExpese totalExpese1">
-          {" "}
           <h3 onClick={() => setCheck(!check)} onDoubleClick={controlstyle1}>
-            {" "}
-            {totalFood.toFixed(2)} کل فٹ{" "}
+            {totalFood.toFixed(2)} ٹوٹل فٹ{" "}
           </h3>
         </div>
-        <div className="totalExpese totalExpese1">
-          {" "}
-          <h3 onClick={controlstyle1} onDoubleClick={ () => setCheck(!check)}>
+        <div className={kiaApnaLakriHai == true ? "one totalExpense" : "two totalExpense"}>
+          
+          {/* <span onClick={() => setCheck(!check)}> */}
             
-            {totalBaliAdat.toFixed()} عداد{" "}
-          </h3>
+            <h3>  ٹوٹل قیمت {totalbaliFoot.toFixed()} </h3> 
+          {/* </span> */}
+        </div>
+        <div className={kiaApnaLakriHai == true ? "two totalExpense" : "one totalExpense"}>
+          
+          {/* <span>  ٹوٹل قیمت Rs: */}
+            <h3> ٹوٹل قیمت   {totalFullPrice.toFixed()} </h3>
+            {/* </span> */}
         </div>
       </div>
     </div>

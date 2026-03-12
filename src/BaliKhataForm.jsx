@@ -33,8 +33,8 @@ function BaliKhataForm({onAddExpense, prices, setPrices, p}) {
     }
   return (
           <form className="expense-form" onSubmit={handleSubmit}>
-             <input type="number" placeholder=" لمبائی  لکھیں " ref={heightRef} value={height} onChange={(e)=> setheight(e.target.value)} />
-             <input type="number" placeholder="چوڑائی لکھیں " value={width} onChange={(e)=> setwidth(e.target.value)} />
+             <input type="number" id='lambai' name='lambai' placeholder=" لمبائی  لکھیں " ref={heightRef} value={height} onChange={(e)=> setheight(e.target.value)} />
+             <input type="number" id='chorai' name='chorai' placeholder="چوڑائی لکھیں " value={width} onChange={(e)=> setwidth(e.target.value)} />
              <button type='submit'>ہوگیا</button>
           </form> 
   )
