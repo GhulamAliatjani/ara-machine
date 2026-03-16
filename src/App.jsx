@@ -65,11 +65,8 @@ function App() {
   );
   
   const deleteItem = (id) => {
-     itemDel.current = setTimeout(() => {
-      alert("Item deleted");
+      console.log("hello");
       setbaliFoot((prev) => prev.filter((item) => item.id != id));
-
-    }, 1000)
   };
   const [isopen, setIspen] = useState(false)
   const totalFood = baliFoot.reduce((sum, item) => sum + item.totalFt, 0);
@@ -108,8 +105,7 @@ function App() {
             onChange={() => {
               setKiaApnaLakriHai(true);
             }}
-          />
-          جی
+          /> جی_ھاں
           <input
             type="radio"
             name="apna"
@@ -118,7 +114,7 @@ function App() {
               setKiaApnaLakriHai(false);
             }}
           />
-          نھی
+          نھیں 
           </div>
         </label>
       </div>
@@ -150,12 +146,12 @@ function App() {
       </div>
       <div className="total-price">
         <div className="totalExpese totalExpese1">
-           <h3 onClick={controlstyle1} >
+           <h3>
             {totalBaliAdat.toFixed()} عداد
           </h3>
         </div>
         <div className="totalExpese totalExpese1">
-          <h3 onClick={() => setCheck(!check)} onDoubleClick={controlstyle1}>
+          <h3>
             {totalFood.toFixed(2)} ٹوٹل فٹ{" "}
           </h3>
         </div>
@@ -180,57 +176,3 @@ function App() {
 }
 
 export default App;
-
-// import React, { useState } from 'react';
-
-// function App() {
-//   const [length, setLength] = useState('');
-//   const [width, setWidth] = useState('');
-//   const [items, setItems] = useState([]);
-//   const [prices, setPrices] = useState([]);
-
-//   const handleSubmit = (e) => {
-//     e.preventDefault();
-//     const lengthNum = parseFloat(length);
-//     const widthNum = parseFloat(width);
-//     const totalFoot = (lengthNum * widthNum) / 304;
-//     const price = totalFoot * 50; // مثال کے طور پر 50 روپے فی فٹ
-//     setItems([...items, { length: lengthNum, width: widthNum, totalFoot, price }]);
-//     setPrices([...prices, price]);
-//     setLength('');
-//     setWidth('');
-//   };
-
-//   const totalPrice = prices.reduce((acc, curr) => acc + curr, 0);
-
-//   return (
-//     <div>
-//       <h1>بلّی کیلکولیٹر</h1>
-//       <form onSubmit={handleSubmit}>
-//         <input
-//           type="number"
-//           placeholder="لمبائی"
-//           value={length}
-//           onChange={(e) => setLength(e.target.value)}
-//         />
-//         <input
-//           type="number"
-//           placeholder="چوڑائی"
-//           value={width}
-//           onChange={(e) => setWidth(e.target.value)}
-//         />
-//         <button type="submit">شامل کریں</button>
-//       </form>
-//       <h2>کل قیمت: {totalPrice.toFixed(2)} روپے</h2>
-//       <ul>
-//         {items.map((item, index) => (
-//           <li key={index}>
-//             لمبائی: {item.length}، چوڑائی: {item.width}، کل فٹ: {item.totalFoot.toFixed(2)}، قیمت: {item.price.toFixed(2)} روپے
-//           </li>
-//         ))}
-//       </ul>
-//     </div>
-//   );
-// }
-
-// export default App;
