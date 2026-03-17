@@ -102,9 +102,18 @@
             display: flex;
             /* border: 2px solid red; */
             padding: 2px 8px;
-
-            
-
+            font-size: 12px ;
+        }
+        .customerName input
+        {
+            padding: 3px 3px;
+            border-radius: 5px;
+            width: clamp(150px, calc(30vw + 0.2rem), 300px);
+            font-size: clamp(11px, calc(1vw + 0.3rem), 14px);
+             background-color :rgba(214, 234, 232, 0.531) ;
+             border: unset;
+             /* background-color: red; */
+             /* font-size: 12px; */
         }
         .firstBtn{
             transition: 2s ease;
@@ -115,6 +124,9 @@
             display: inline-block;
             opacity: 1;
 
+        }
+        .lambai{
+            background-color: rgba(255, 0, 195, 0.084);
         }
         
         h1{
@@ -162,12 +174,12 @@
             justify-content: space-around;
             /* align-items: end; */
             overflow: visible;
-            background-color: yellow;
+            /* background-color: yellow; */
             padding: 10px;
         }
         .bndKro1 label .question1{
             display: inline-block !important;
-            background-color: purple;
+            /* background-color: purple; */
             position: absolute;
             opacity: 1;
             visiblity: visible;
@@ -179,34 +191,26 @@
         .SecoundRow label .choose{
             display: flex;
             flex-direction: row;
-            width: 190px;
+            width: clamp(130px, calc(30vw + 0.2rem), 300px);
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            background-color: red;
-            /* background: #000; */
             justify-content: center;
             align-items: center;
         }
         .detail-for-shopkeeper1{
             height: 0 ;
             opacity: 0;
-            /* display: flex; */
-            /* justify-content: space-around; */
-            /* align-items: center; */
-        }
+       }
         .detail-for-shopkeeper2{
             transition: 2s ease-in-out;
             height: fit-content;
             display: flex;
             opacity: 1;
-            background-color: rgba(179, 105, 105, 0.645);
-
+            background-color: rgba(239, 252, 60, 0.405);
         }
          .detail-for-shopkeeper2 h4{
-        padding: 5px 32px;
-        /* background-color: var(--color1); */
-        /* border-left: 1px solid #000; */
+          padding: 5px 32px;
        }
      
         .expense-form{
@@ -215,11 +219,8 @@
             justify-content: space-around;
             padding: 8px 0px;
             width: 80%;
-            /* height: fit-content; */
             background-image: var(--bg3);
-            background-color :rgba(214, 234, 232, 0.531) ;
-            
-
+            background-color :rgba(214, 234, 232, 0.531) ;     
             /* height: 0; */
         }
         input{
