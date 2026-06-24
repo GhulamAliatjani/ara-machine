@@ -1,16 +1,16 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**Ara Machine**
+ Wood cutting expense Website
+   A simple bill to show customer there bill in a transparent and clear way. 
+   It is useful for carpenter's shopkeeper specially the wood cutting machine runner
+#How To work it
+   Just type the lenght and width of the wood which want to be calculatted, then to find the expense a simple formula work
+   ( length in feet *width in inches *with in inches *2304 ). Then the total feet of the sphere of the wood will find then the basic price is 200 per/ft will multiply. We can custimize the price of per/ft variusly as well. 
+# Technologies used in it
+   HTML, CSS, JavaScript, React
+# How it look on web
+   https://ghulamaliatjani.github.io/ara-machine/
+# For the database temperarily I used Local Storage
+# Why It unique
+   It is unique because I have never seen like this in web or app on internet. It is so easy to used means every illitrate person also can use it.
+   just need to know about numbers. It also reduce the time and the chances of mistake.
+   
